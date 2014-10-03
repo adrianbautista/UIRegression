@@ -81,3 +81,5 @@ shots_history
 # Ignore casperjs images
 ex-3-failures
 ex-3-screenshots
+ex-4-screenshots
+ex-4-failures

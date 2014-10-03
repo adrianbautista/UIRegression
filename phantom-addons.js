@@ -2,8 +2,8 @@ var phantomcss = require('phantomcss/phantomcss.js');
 
 phantomcss.init({
     libraryRoot: './node_modules/phantomcss',
-    screenshotRoot: './ex-3-screenshots',
-    failedComparisonsRoot: './ex-3-failures'
+    screenshotRoot: './ex-4-screenshots',
+    failedComparisonsRoot: './ex-4-failures'
 });
 
 // Set the page width
@@ -13,6 +13,16 @@ casper.options.viewportSize = {
 };
 
 // Tests go here
+
+casper.start('http://localhost:8080/add-ons.html');
+
+casper.then(function() {
+  this.click('a[href="#modal-content"]');
+});
+
+casper.waitForSelector('.fancybox-opened.fancybox-wrap', function() {
+  phantomcss.screenshot('.fancybox-wrap', 'Modal Overlay');
+});
 
 casper.then(function(){
     // compare screenshots
