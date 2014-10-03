@@ -21,6 +21,7 @@ casper.then(function() {
 });
 
 casper.waitForSelector('.fancybox-opened.fancybox-wrap', function() {
+  // this.captureSelector('./ex-4-screenshots/fancy-box-modal.png', '.fancybox-wrap');
   phantomcss.screenshot('.fancybox-wrap', 'Modal Overlay');
 });
 
