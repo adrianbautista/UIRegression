@@ -22,11 +22,10 @@ page.settings = { loadImages: true, javascriptEnabled: true };
 page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.17';
 
 // You can place custom headers here, example below.
-// page.customHeaders = {
-
-//      'X-Candy-OVERRIDE': 'https://api.live.bbc.co.uk/'
- 
-//  };
+page.customHeaders = {
+  // 'x-auth-token': 'AUTHENTICATE!'
+  // 'X-Candy-OVERRIDE': 'https://api.live.bbc.co.uk/'
+ };
 
 // If you want to set a cookie, just add your details below in the following way.
 
@@ -56,6 +55,11 @@ page.open(url, function(status) {
   if (status !== 'success') {
     console.log('Error with page ' + url);
     phantom.exit();
+  } else {
+    page.evaluate(function() {
+      // var title = document.getElementsByTagName('h1')[0];
+      // title.textContent = 'UI Regression Testing';
+    });
   }
 });
 
