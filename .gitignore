@@ -73,3 +73,6 @@ $RECYCLE.BIN/
 *.lnk
 
 .vagrant
+
+# Ignore wraith images
+shots
