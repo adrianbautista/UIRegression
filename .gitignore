@@ -77,3 +77,7 @@ $RECYCLE.BIN/
 # Ignore wraith images
 shots
 shots_history
+
+# Ignore casperjs images
+ex-3-failures
+ex-3-screenshots

@@ -91,6 +91,8 @@ body {
 
 a {
   text-decoration: underline;
+  /* TO FAIL THE CASPERJS TEST */
+  /* text-decoration: none; */
   color: #0041b1;
   /* default link color */ }
   a:hover, a:focus {
